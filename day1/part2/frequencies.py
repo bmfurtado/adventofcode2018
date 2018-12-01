@@ -11,10 +11,10 @@ def get_changes():
 
 
 def first_repeated_frequency(changes):
-  seen = []
+  seen = set()
   frequency = 0
   for change in cycle(changes):
-    seen.append(frequency)
+    seen.add(frequency)
     frequency = frequency + change
     if frequency in seen:
       return frequency
